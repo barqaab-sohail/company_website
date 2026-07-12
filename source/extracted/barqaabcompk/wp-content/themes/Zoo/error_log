@@ -1,0 +1,56 @@
+[1[02-Nov-2020 02:36:05 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php on line 1
+[02-Nov-2020 02:39:09 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php on line 1
+[08-Nov-2020 15:48:05 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php on line 1
+[14-Jan-2021 04:08:26 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php on line 1
+[19-Jan-2021 01:03:27 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php on line 1
+[10-Feb-2021 07:13:26 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php on line 1
+[10-Mar-2021 01:01:57 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php on line 1
+[10-Apr-2021 01:44:34 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php on line 1
+[14-Dec-2021 08:43:54 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/index.php on line 1
+[14-Dec-2021 08:43:55 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/404.php on line 1
+[14-Dec-2021 08:43:55 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/archive.php:1
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/archive.php on line 1
+[07-Nov-2024 08:56:10 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home3/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home3/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/404.php on line 1
+[09-Nov-2024 07:05:18 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home3/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home3/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/404.php on line 1
+[09-Nov-2024 07:05:21 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home3/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/404.php:1
+Stack trace:
+#0 {main}
+  thrown in /home3/barqaabc/public_html/barqaabcompk/wp-content/themes/Zoo/404.php on line 1

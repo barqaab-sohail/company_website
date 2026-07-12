@@ -1,0 +1,189 @@
+[2[02-Nov-2020 02:35:42 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php:9
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php on line 9
+[02-Nov-2020 02:38:46 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php:9
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php on line 9
+[08-Nov-2020 15:47:40 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php:9
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php on line 9
+[09-Dec-2020 09:19:58 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[09-Dec-2020 09:19:58 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[09-Dec-2020 09:19:58 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[09-Dec-2020 09:19:58 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[09-Dec-2020 09:19:58 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[08-Jan-2021 07:51:47 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php:9
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php on line 9
+[14-Jan-2021 04:08:04 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php:9
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php on line 9
+[19-Jan-2021 01:02:37 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php:9
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php on line 9
+[20-Jan-2021 03:56:21 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[20-Jan-2021 03:56:21 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[20-Jan-2021 03:56:21 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[20-Jan-2021 03:56:21 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[20-Jan-2021 03:56:21 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[22-Jan-2021 02:26:16 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[22-Jan-2021 02:26:16 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[22-Jan-2021 02:26:16 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[22-Jan-2021 02:26:16 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[22-Jan-2021 02:26:16 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[10-Feb-2021 07:12:55 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php:9
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php on line 9
+[16-Feb-2021 13:26:22 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[16-Feb-2021 13:26:22 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[16-Feb-2021 13:26:22 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[16-Feb-2021 13:26:22 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[16-Feb-2021 13:26:22 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[21-Feb-2021 10:01:16 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[21-Feb-2021 10:01:16 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[21-Feb-2021 10:01:16 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[21-Feb-2021 10:01:16 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[21-Feb-2021 10:01:16 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[24-Feb-2021 09:21:25 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[24-Feb-2021 09:21:25 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[24-Feb-2021 09:21:25 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[24-Feb-2021 09:21:25 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[24-Feb-2021 09:21:25 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[10-Mar-2021 01:01:24 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php:9
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php on line 9
+[20-Mar-2021 02:23:47 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[20-Mar-2021 02:23:47 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[20-Mar-2021 02:23:47 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[20-Mar-2021 02:23:47 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[20-Mar-2021 02:23:47 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[10-Apr-2021 01:44:07 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php:9
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/rss-functions.php on line 9
+[01-Jul-2021 10:57:07 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[01-Jul-2021 10:57:07 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[01-Jul-2021 10:57:07 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[01-Jul-2021 10:57:07 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[01-Jul-2021 10:57:07 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home4/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[17-Jul-2021 01:08:57 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/locale.php:11
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/locale.php on line 11
+[17-Jul-2021 09:34:06 America/Boise] PHP Fatal error:  Uncaught Error: Class 'Walker' not found in /home4/barqaabc/public_html/barqaabcompk/wp-includes/class-walker-nav-menu.php:17
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/class-walker-nav-menu.php on line 17
+[23-Oct-2021 04:48:45 America/Boise] PHP Fatal error:  Uncaught Error: Class 'Walker' not found in /home4/barqaabc/public_html/barqaabcompk/wp-includes/class-walker-nav-menu.php:17
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/class-walker-nav-menu.php on line 17
+[23-Oct-2021 08:49:28 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home4/barqaabc/public_html/barqaabcompk/wp-includes/locale.php:11
+Stack trace:
+#0 {main}
+  thrown in /home4/barqaabc/public_html/barqaabcompk/wp-includes/locale.php on line 11
+[06-Feb-2022 06:45:16 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[06-Feb-2022 06:45:16 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[06-Feb-2022 06:45:16 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[06-Feb-2022 06:45:16 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[06-Feb-2022 06:45:16 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[29-Mar-2022 06:46:21 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[29-Mar-2022 06:46:21 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[29-Mar-2022 06:46:21 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[29-Mar-2022 06:46:21 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[29-Mar-2022 06:46:21 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[14-Aug-2022 09:59:23 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[14-Aug-2022 09:59:23 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[14-Aug-2022 09:59:23 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[14-Aug-2022 09:59:23 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[14-Aug-2022 09:59:23 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[28-Aug-2022 13:15:44 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/cache.php on line 12
+[28-Aug-2022 13:15:44 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/cache.php on line 12
+[28-Aug-2022 13:15:44 America/Boise] PHP Warning:  require_once(ABSPATHWPINC/class-wp-object-cache.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/cache.php on line 12
+[28-Aug-2022 13:15:44 America/Boise] PHP Fatal error:  require_once(): Failed opening required 'ABSPATHWPINC/class-wp-object-cache.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/cache.php on line 12
+[28-Aug-2022 13:17:04 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/cache.php on line 12
+[28-Aug-2022 13:17:04 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/cache.php on line 12
+[28-Aug-2022 13:17:04 America/Boise] PHP Warning:  require_once(ABSPATHWPINC/class-wp-object-cache.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/cache.php on line 12
+[28-Aug-2022 13:17:04 America/Boise] PHP Fatal error:  require_once(): Failed opening required 'ABSPATHWPINC/class-wp-object-cache.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/cache.php on line 12
+[17-Sep-2022 06:21:18 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[17-Sep-2022 06:21:18 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[17-Sep-2022 06:21:18 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[17-Sep-2022 06:21:18 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[17-Sep-2022 06:21:18 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[25-Sep-2022 03:41:35 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function wp_using_themes() in /home3/barqaabc/public_html/barqaabcompk/wp-includes/template-loader.php:7
+Stack trace:
+#0 {main}
+  thrown in /home3/barqaabc/public_html/barqaabcompk/wp-includes/template-loader.php on line 7
+[30-Sep-2022 08:35:35 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[30-Sep-2022 08:35:35 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[30-Sep-2022 08:35:35 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[30-Sep-2022 08:35:35 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[30-Sep-2022 08:35:35 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[19-Nov-2022 19:35:00 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[19-Nov-2022 19:35:00 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[19-Nov-2022 19:35:00 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[19-Nov-2022 19:35:00 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[19-Nov-2022 19:35:00 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[30-Nov-2022 06:27:42 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/compat.php on line 335
+[30-Nov-2022 06:27:42 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/compat.php on line 335
+[30-Nov-2022 06:27:42 America/Boise] PHP Warning:  require(ABSPATHWPINC/sodium_compat/autoload.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/compat.php on line 335
+[30-Nov-2022 06:27:42 America/Boise] PHP Warning:  require(ABSPATHWPINC/sodium_compat/autoload.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/compat.php on line 335
+[30-Nov-2022 06:27:42 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/sodium_compat/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/compat.php on line 335
+[29-Dec-2022 03:11:52 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[29-Dec-2022 03:11:52 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[29-Dec-2022 03:11:52 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[29-Dec-2022 03:11:52 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[29-Dec-2022 03:11:52 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[25-Jan-2023 16:14:38 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/compat.php on line 335
+[25-Jan-2023 16:14:38 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/compat.php on line 335
+[25-Jan-2023 16:14:38 America/Boise] PHP Warning:  require(ABSPATHWPINC/sodium_compat/autoload.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/compat.php on line 335
+[25-Jan-2023 16:14:38 America/Boise] PHP Warning:  require(ABSPATHWPINC/sodium_compat/autoload.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/compat.php on line 335
+[25-Jan-2023 16:14:38 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/sodium_compat/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/compat.php on line 335
+[08-Jul-2023 18:14:37 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[08-Jul-2023 18:14:37 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[08-Jul-2023 18:14:37 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[08-Jul-2023 18:14:37 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[08-Jul-2023 18:14:37 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[25-Aug-2023 09:56:59 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[25-Aug-2023 09:56:59 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[25-Aug-2023 09:56:59 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[25-Aug-2023 09:56:59 America/Boise] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[25-Aug-2023 09:56:59 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/functions.php on line 8
+[05-Jul-2024 12:31:22 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home3/barqaabc/public_html/barqaabcompk/wp-includes/date.php:11
+Stack trace:
+#0 {main}
+  thrown in /home3/barqaabc/public_html/barqaabcompk/wp-includes/date.php on line 11
+[05-Jul-2024 12:31:23 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home3/barqaabc/public_html/barqaabcompk/wp-includes/date.php:11
+Stack trace:
+#0 {main}
+  thrown in /home3/barqaabc/public_html/barqaabcompk/wp-includes/date.php on line 11
+[16-Nov-2024 15:33:31 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/meta.php on line 13
+[16-Nov-2024 15:33:31 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/meta.php on line 13
+[16-Nov-2024 15:33:31 America/Boise] PHP Warning:  require(ABSPATHWPINC/class-wp-metadata-lazyloader.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/meta.php on line 13
+[16-Nov-2024 15:33:31 America/Boise] PHP Warning:  require(ABSPATHWPINC/class-wp-metadata-lazyloader.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/meta.php on line 13
+[16-Nov-2024 15:33:31 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-wp-metadata-lazyloader.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/meta.php on line 13
+[16-Nov-2024 15:33:32 America/Boise] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/meta.php on line 13
+[16-Nov-2024 15:33:32 America/Boise] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home3/barqaabc/public_html/barqaabcompk/wp-includes/meta.php on line 13
+[16-Nov-2024 15:33:32 America/Boise] PHP Warning:  require(ABSPATHWPINC/class-wp-metadata-lazyloader.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/meta.php on line 13
+[16-Nov-2024 15:33:32 America/Boise] PHP Warning:  require(ABSPATHWPINC/class-wp-metadata-lazyloader.php): failed to open stream: No such file or directory in /home3/barqaabc/public_html/barqaabcompk/wp-includes/meta.php on line 13
+[16-Nov-2024 15:33:32 America/Boise] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/class-wp-metadata-lazyloader.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home3/barqaabc/public_html/barqaabcompk/wp-includes/meta.php on line 13
+[10-Dec-2024 05:40:27 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function is_main_site() in /home3/barqaabc/public_html/barqaabcompk/wp-includes/update.php:1145
+Stack trace:
+#0 {main}
+  thrown in /home3/barqaabc/public_html/barqaabcompk/wp-includes/update.php on line 1145
+[20-Mar-2025 03:17:14 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home3/barqaabc/public_html/barqaabcompk/wp-includes/class.wp-styles.php:11
+Stack trace:
+#0 {main}
+  thrown in /home3/barqaabc/public_html/barqaabcompk/wp-includes/class.wp-styles.php on line 11
+[20-Mar-2025 04:55:17 America/Boise] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home3/barqaabc/public_html/barqaabcompk/wp-includes/class.wp-styles.php:11
+Stack trace:
+#0 {main}
+  thrown in /home3/barqaabc/public_html/barqaabcompk/wp-includes/class.wp-styles.php on line 11

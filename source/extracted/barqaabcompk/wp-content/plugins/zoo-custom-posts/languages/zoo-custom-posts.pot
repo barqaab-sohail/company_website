@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zoo-custom-posts\n"
+"POT-Creation-Date: 2014-02-28 09:17+1000\n"
+"PO-Revision-Date: 2014-02-28 09:17+1000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../zoo-custom-posts.php:22
+msgid "Flex Sliders"
+msgstr ""
+
+#: ../zoo-custom-posts.php:23 ../zoo-custom-posts.php:33
+msgid "Flex Slider"
+msgstr ""
+
+#: ../zoo-custom-posts.php:24 ../zoo-custom-posts.php:56
+#: ../zoo-custom-posts.php:88
+msgid "Add New"
+msgstr ""
+
+#: ../zoo-custom-posts.php:25 ../zoo-custom-posts.php:57
+msgid "Add New Slide"
+msgstr ""
+
+#: ../zoo-custom-posts.php:26 ../zoo-custom-posts.php:58
+msgid "Edit Slide"
+msgstr ""
+
+#: ../zoo-custom-posts.php:27 ../zoo-custom-posts.php:59
+msgid "New Slide"
+msgstr ""
+
+#: ../zoo-custom-posts.php:28 ../zoo-custom-posts.php:60
+msgid "All Slides"
+msgstr ""
+
+#: ../zoo-custom-posts.php:29 ../zoo-custom-posts.php:61
+msgid "View Slide"
+msgstr ""
+
+#: ../zoo-custom-posts.php:30
+msgid "Search Sliders"
+msgstr ""
+
+#: ../zoo-custom-posts.php:31 ../zoo-custom-posts.php:63
+msgid "No sliders found"
+msgstr ""
+
+#: ../zoo-custom-posts.php:32 ../zoo-custom-posts.php:64
+msgid "No sliders found in the Trash"
+msgstr ""
+
+#: ../zoo-custom-posts.php:37
+msgid "Flex Slider Slides"
+msgstr ""
+
+#: ../zoo-custom-posts.php:54 ../zoo-custom-posts.php:65
+msgid "SuperSlides"
+msgstr ""
+
+#: ../zoo-custom-posts.php:55
+msgid "SuperSlides Slide"
+msgstr ""
+
+#: ../zoo-custom-posts.php:62
+msgid "Search Slide"
+msgstr ""
+
+#: ../zoo-custom-posts.php:69
+msgid "Super Slider / Home Page Slider Slides"
+msgstr ""
+
+#: ../zoo-custom-posts.php:86 ../zoo-custom-posts.php:101
+msgid "Portfolio Items"
+msgstr ""
+
+#: ../zoo-custom-posts.php:87
+msgid "Portfolio Item"
+msgstr ""
+
+#: ../zoo-custom-posts.php:89
+msgid "Add New Item"
+msgstr ""
+
+#: ../zoo-custom-posts.php:90
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#: ../zoo-custom-posts.php:91
+msgid "New Portfolio Item"
+msgstr ""
+
+#: ../zoo-custom-posts.php:92
+msgid "All Items"
+msgstr ""
+
+#: ../zoo-custom-posts.php:93
+msgid "View Item"
+msgstr ""
+
+#: ../zoo-custom-posts.php:94
+msgid "Search Portfolios"
+msgstr ""
+
+#: ../zoo-custom-posts.php:95
+msgid "No items found"
+msgstr ""
+
+#: ../zoo-custom-posts.php:96
+msgid "No items found in the Trash"
+msgstr ""
+
+#: ../zoo-custom-posts.php:97
+msgid "Portfolio"
+msgstr ""
+
+#: ../zoo-custom-posts.php:122
+msgid "Flex Slider Categories"
+msgstr ""
+
+#: ../zoo-custom-posts.php:123
+msgid "Add New Flex Slider Category"
+msgstr ""
+
+#: ../zoo-custom-posts.php:124
+msgid "New Flex Slider Category"
+msgstr ""
+
+#: ../zoo-custom-posts.php:136
+msgid "Portfolio Categories"
+msgstr ""
+
+#: ../zoo-custom-posts.php:137
+msgid "Add New Portfolio Category"
+msgstr ""
+
+#: ../zoo-custom-posts.php:138
+msgid "New Portfolio Category"
+msgstr ""

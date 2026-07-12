@@ -1,0 +1,32 @@
+body.home-screen { margin: 0; overflow: hidden; background: #000; }
+.home-screen main, .legacy-home { height: 100vh; }
+.legacy-home { min-height: 520px; display: grid; grid-template-rows: minmax(0, 1fr) 82px; background: #000; }
+.legacy-hero { position: relative; background: #111 url('../assets/images/barqaab-dam.jpg') center/cover no-repeat; }
+.legacy-heading { position: absolute; top: 10%; left: 0; display: block; width: min(35.5vw, 708px); height: auto; }
+.legacy-nav { height: 82px; display: grid; grid-template-columns: minmax(190px, 29%) 1fr; align-items: center; padding: 0 max(3vw, 32px); background: #030303; border-bottom: 1px solid #4d392c; color: #fff; }
+.legacy-nav .legacy-mark { display: flex; justify-self: center; align-items: center; }
+.legacy-mark img { display: block; width: 54px; height: auto; }
+.legacy-links { display: flex; align-items: stretch; justify-content: center; height: 100%; gap: clamp(28px, 4.1vw, 76px); }
+.legacy-links a { position: relative; display: flex; align-items: center; color: #fff; font: 500 11px/1 Arial, sans-serif; text-transform: uppercase; letter-spacing: 2px; white-space: nowrap; }
+.legacy-links a::after { content: ""; position: absolute; right: 50%; bottom: 0; left: 50%; height: 2px; background: #d7924e; transition: .2s; }
+.legacy-links a:hover::after, .legacy-links a.active::after { right: 0; left: 0; }
+.legacy-nav > button { display: none; width: 42px; padding: 8px; background: none; border: 0; }
+.legacy-nav > button span { display: block; height: 2px; margin: 6px 0; background: #fff; }
+
+@media (max-width: 900px) {
+    .legacy-home { grid-template-rows: minmax(0, 1fr) 68px; }
+    .legacy-heading { top: 9%; width: min(64vw, 560px); }
+    .legacy-nav { height: 68px; grid-template-columns: 1fr auto; padding: 0 22px; }
+    .legacy-nav .legacy-mark { justify-self: start; }
+    .legacy-mark img { width: 45px; }
+    .legacy-nav > button { display: block; }
+    .legacy-links { position: absolute; z-index: 10; right: 0; bottom: 68px; left: 0; display: none; height: auto; padding: 8px 22px 18px; background: rgba(0,0,0,.96); flex-direction: column; gap: 0; }
+    .legacy-nav.expanded .legacy-links { display: flex; }
+    .legacy-links a { padding: 13px 0; }
+    .legacy-links a::after { display: none; }
+}
+@media (max-width: 560px) {
+    .legacy-hero { background-position: center; }
+    .legacy-heading { top: 7%; width: 78vw; }
+    .legacy-home { min-height: 440px; }
+}
