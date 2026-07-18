@@ -18,7 +18,15 @@ class ManagementMemberResource extends Resource
 {
     protected static ?string $model = ManagementMember::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static ?string $navigationLabel = 'Management';
+
+    protected static ?string $modelLabel = 'management member';
+
+    protected static ?string $pluralModelLabel = 'Management';
+
+    protected static ?string $slug = 'management';
+
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingOffice2;
 
     public static function form(Schema $schema): Schema
     {

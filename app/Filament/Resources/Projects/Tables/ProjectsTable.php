@@ -16,11 +16,11 @@ class ProjectsTable
         return $table
             ->columns([
                 ImageColumn::make('featuredImage.path')->disk('public')->label('Image'),
-                TextColumn::make('title')->searchable()->sortable(), TextColumn::make('category')->badge(),
+                TextColumn::make('title')->searchable()->sortable(), TextColumn::make('projectCategory.name')->label('Category')->badge()->sortable(),
                 TextColumn::make('images_count')->counts('images')->label('Images'), TextColumn::make('status')->badge(),
             ])
             ->filters([
-                SelectFilter::make('category')->options(['power-projects'=>'Power Projects','dams-hydropower'=>'Dams and Hydropower','canals-barrages-drains'=>'Canals, Barrages and Drains','environment'=>'Environment','construction-highways'=>'Construction']),
+                SelectFilter::make('project_category_id')->label('Category')->relationship('projectCategory', 'name'),
             ])
             ->recordActions([
                 EditAction::make(),

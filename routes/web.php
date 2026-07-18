@@ -4,9 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 
 Route::get('/', [SiteController::class,'home'])->name('home');
-Route::view('/barqaab', 'site.about')->name('about');
+Route::get('/barqaab', [SiteController::class,'about'])->name('about');
 Route::redirect('/about-us', '/barqaab', 301);
 Route::get('/management', [SiteController::class,'management'])->name('management');
+Route::get('/core-staff', [SiteController::class,'coreStaff'])->name('core-staff');
 Route::get('/services', [SiteController::class,'services'])->name('services');
 Route::view('/contact', 'site.contact')->name('contact');
 Route::redirect('/contact-us', '/contact', 301);

@@ -15,6 +15,12 @@
         <label><span>E-Mail Address:<b>*</b></span><input type="email" name="email" value="{{ old('email') }}" required></label>
         <label><span>Regarding Job:<b>*</b></span><select name="regarding_job" required><option value="" @selected(!old('regarding_job'))></option><option value="general" @selected(old('regarding_job')==='general')>General Purpose</option>@foreach($jobs as $job)<option value="{{ $job->id }}" @selected((string)old('regarding_job')===(string)$job->id)>{{ $job->title }}@if($job->location) — {{ $job->location }}@endif</option>@endforeach</select></label>
 
+        <aside id="job-requirements" class="job-requirements" hidden aria-live="polite">
+            <h2>Job Requirements</h2>
+            <p id="minimum-qualification-row"><strong>Minimum Qualification</strong><span id="minimum-qualification"></span></p>
+            <p id="experience-required-row"><strong>Experience Required</strong><span id="experience-required"></span></p>
+        </aside>
+
         <fieldset class="education-fieldset"><legend>Education:<b>*</b></legend><div id="education-rows">@foreach(old('education',[['qualification'=>'','year'=>'']]) as $index=>$education)<div class="education-row"><input name="education[{{ $index }}][qualification]" value="{{ $education['qualification'] ?? '' }}" placeholder="Qualification, e.g. B.S (Electrical)" required><input type="number" name="education[{{ $index }}][year]" value="{{ $education['year'] ?? '' }}" placeholder="Completion year" min="1940" max="{{ date('Y') }}" required><button type="button" class="remove-education" aria-label="Remove education">×</button></div>@endforeach</div><button type="button" id="add-education">+ Add Education</button></fieldset>
         <label><span>Total Experience:<b>*</b></span><div class="experience-input"><input type="number" name="total_experience" value="{{ old('total_experience') }}" min="0" max="80" step="0.5" required><small>Years</small></div></label>
         <label><span>Attachment(s):<b>*</b></span><div><input type="file" name="resume" accept=".pdf,.doc,.docx" required><small class="file-help">Allowed extensions: pdf, doc, docx — maximum 10 MB</small></div></label>
@@ -23,7 +29,11 @@
 </section>
 <script>
 const educationRows=document.getElementById('education-rows');
+const regardingJob=document.querySelector('select[name="regarding_job"]');
+const jobRequirements=@json($jobs->mapWithKeys(fn($job)=>[(string)$job->id=>['qualification'=>$job->minimum_qualification,'experience'=>$job->experience_required]]));
+function updateJobRequirements(){const selected=jobRequirements[regardingJob.value]||{};const qualification=selected.qualification||'';const experience=selected.experience||'';document.getElementById('minimum-qualification').textContent=qualification;document.getElementById('experience-required').textContent=experience;document.getElementById('minimum-qualification-row').hidden=!qualification;document.getElementById('experience-required-row').hidden=!experience;document.getElementById('job-requirements').hidden=!qualification&&!experience}
 function bindRemove(){document.querySelectorAll('.remove-education').forEach(button=>button.onclick=()=>{if(educationRows.children.length>1)button.closest('.education-row').remove()})}
 document.getElementById('add-education').onclick=()=>{const index=Date.now();educationRows.insertAdjacentHTML('beforeend',`<div class="education-row"><input name="education[${index}][qualification]" placeholder="Qualification, e.g. M.Sc (Electrical)" required><input type="number" name="education[${index}][year]" placeholder="Completion year" min="1940" max="{{ date('Y') }}" required><button type="button" class="remove-education" aria-label="Remove education">×</button></div>`);bindRemove()};bindRemove();
+regardingJob.addEventListener('change',updateJobRequirements);updateJobRequirements();
 </script>
 @endsection

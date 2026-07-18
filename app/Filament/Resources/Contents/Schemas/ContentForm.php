@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Contents\Schemas;
 
+use App\Models\ProjectCategory;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\{DateTimePicker, FileUpload, Hidden, RichEditor, Select, Textarea, TextInput};
 use Filament\Schemas\Components\Section;
@@ -17,7 +18,7 @@ class ContentForm
                     Select::make('type')->options(['page'=>'Page','post'=>'News','project'=>'Project','job'=>'Job','service'=>'Service','team'=>'Team'])->required()->default('page'),
                     TextInput::make('title')->required()->live(onBlur: true)->afterStateUpdated(fn ($state, $set) => $set('slug', Str::slug($state))),
                     TextInput::make('slug')->required()->unique(ignoreRecord: true),
-                    Select::make('category')->options(['power-projects'=>'Power Projects','dams-hydropower'=>'Dams and Hydropower','canals-barrages-drains'=>'Canals, Barrages and Drains','environment'=>'Environment','construction-highways'=>'Construction'])->visible(fn ($get) => $get('type') === 'project'),
+                    Select::make('category')->options(fn () => ProjectCategory::where('is_active', true)->orderBy('sort_order')->orderBy('name')->pluck('name', 'slug')->all())->visible(fn ($get) => $get('type') === 'project'),
                     Textarea::make('excerpt')->rows(3)->columnSpanFull(),
                     RichEditor::make('body')->columnSpanFull(),
                     Textarea::make('scope_of_project')->label('Scope of the Project')->rows(7)->visible(fn ($get) => $get('type') === 'project')->columnSpanFull(),

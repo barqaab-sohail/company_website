@@ -1,23 +1,143 @@
 @extends('layouts.legacy-page')
 @section('title', 'BARQAAB | ABOUT US')
 @section('content')
-<article class="about-page">
-    <h1>ABOUT US</h1>
-    <p class="about-lead"><em>BARQAAB Consulting Services was established in May 2000 as Engineering Consulting Company. Its core team of professionals has unmatchable experience of working on WAPDA’s Water and Power sector projects. The overall team of professionals numbering about 350 is a mix of young, middle level and senior engineers with rich experience in various engineering disciplines. Overall staff strength is 550.</em></p>
-
-    <div class="about-feature">
-        <img src="{{ asset('assets/images/barqaab-about-logo.jpg') }}" alt="BARQAAB">
-        <div>
-            <p>BARQAAB has successfully implemented a large number of important projects independently and as a joint venture partner. BARQAAB is proud of independently planning, designing and supervising the construction of Rainee Canal Project including its Headwork of 10,000 cusecs at Guddu Barrage, 111km main/branch canal, 133km distributary and minor canals and 394 structures of various types. Hardly any other consultant has independently planned, designed and implemented a canal project of this size and nature.</p>
-            <p>Other water sector projects include Muzaffargarh Canal Rehabilitation and Lining Project (as Lead Firm), Mangla Dam Raising Project and Khanki Barrage (as a major JV partner).</p>
-            <p>BARQAAB also has the credit of being a major JV partner for the detailed design of Diamer Basha Dam Project – the highest roller compacted concrete dam in the world. BARQAAB independently carried out the feasibility of 10,000 cusecs Mangla-Marala Link Canal and the feasibility studies of a large number of dams in all the four provinces and in FATA. BARQAAB has recently completed feasibility study of Dadhocha Dam and is presently carrying out feasibility of UJC as a lead firm in the JV.</p>
-            <p>BARQAAB was also associated as a JV partner for design of lining of Rice Canal, Dadu Canal, Rohri Canal, KB Feeder Canal, Phuleli Canal and Pinyari Canal in Sindh and is presently working as a JV partner for the construction supervision of Jhamrao Canal lining and rehabilitation project. BARQAAB was a JV partner for the detailed design and construction supervision of RBOD III project.</p>
+<section class="about-page">
+    <header class="about-hero">
+        <div class="about-hero-copy">
+            <p class="about-eyebrow">{{ $about->eyebrow }}</p>
+            <h1>{{ Str::upper($about->title) }}</h1>
+            <p class="about-lead">{{ $about->hero_text }}</p>
         </div>
-    </div>
+        <div class="about-mark">
+            <span>Water. Power. Progress.</span>
+            <img src="{{ asset('assets/images/barqaab-about-logo.jpg') }}" alt="BARQAAB Consulting Services logo">
+        </div>
+    </header>
 
-    <div class="about-closing">
-        <p>BARQAAB’s consultancy services cover all engineering disciplines but its main field of experience is the water and power resources development projects. Scope of services provided in these sectors cover planning including surveys, field investigations, project identification, concept papers, pre-feasibility and feasibility studies, ranking studies and prioritization, detailed design &amp; implementation of irrigation, drainage, dam and hydropower projects. BARQAAB also specializes in hydrogeological characteristics for groundwater management.</p>
-        <p>All BARQAAB Offices are ISO 9001:2015, 14001:2015 and 45001:2018 Certified.</p>
-    </div>
-</article>
+    @if($about->highlights)
+        <div class="about-highlights" aria-label="Company highlights">
+            @foreach($about->highlights as $highlight)
+                <article><strong>{{ $highlight['value'] ?? '' }}</strong><span>{{ $highlight['label'] ?? '' }}</span></article>
+            @endforeach
+        </div>
+    @endif
+
+    <section class="about-story" id="overview">
+        <header>
+            <p>Overview</p>
+            <h2>{{ $about->overview_heading }}</h2>
+        </header>
+        <div class="about-story-copy about-rich-copy">{!! $about->overview_body !!}</div>
+    </section>
+
+    <section class="about-organization" id="organization-chart">
+        <header class="about-section-heading">
+            <p>Organization Chart</p>
+            <h2>{{ $about->organization_heading }}</h2>
+            @if($about->organization_intro)<div>{{ $about->organization_intro }}</div>@endif
+        </header>
+        <div class="organization-chart">
+            @foreach($about->organization_units ?? [] as $unit)
+                <article>
+                    <h3>{{ $unit['title'] ?? '' }}</h3>
+                    <ul>
+                        @foreach(preg_split('/\r\n|\r|\n/', $unit['details'] ?? '') as $detail)
+                            @if(trim($detail) !== '')<li>{{ $detail }}</li>@endif
+                        @endforeach
+                    </ul>
+                </article>
+            @endforeach
+        </div>
+    </section>
+
+    <section class="about-registration" id="registration">
+        <header class="about-section-heading">
+            <p>Registration</p>
+            <h2>Registered and certified to deliver</h2>
+        </header>
+        <div class="registration-grid">
+            @foreach($about->registrations ?? [] as $registration)
+                <article>
+                    <span>{{ str_pad((string)$loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                    <h3>{{ $registration['title'] ?? '' }}</h3>
+                    @if($registration['number'] ?? null)<strong>{{ $registration['number'] }}</strong>@endif
+                    @if($registration['details'] ?? null)<p>{{ $registration['details'] }}</p>@endif
+                </article>
+            @endforeach
+        </div>
+    </section>
+
+    <section class="about-clients" id="clients">
+        <header class="about-section-heading">
+            <p>Our Clients</p>
+            <h2>Organizations that trust BARQAAB</h2>
+            @if($about->clients_intro)<div>{{ $about->clients_intro }}</div>@endif
+        </header>
+        <div class="clients-grid">
+            @foreach($about->clients ?? [] as $client)
+                @php($clientUrl = $client['website'] ?? null)
+                <{{ $clientUrl ? 'a' : 'article' }} class="client-card" @if($clientUrl) href="{{ $clientUrl }}" target="_blank" rel="noopener" @endif>
+                    @if($client['logo'] ?? null)
+                        <img src="{{ $about->mediaUrl($client['logo']) }}" alt="{{ $client['name'] ?? 'Client' }} logo">
+                    @else
+                        <span>{{ Str::upper(Str::substr($client['name'] ?? '', 0, 2)) }}</span>
+                    @endif
+                    <strong>{{ $client['name'] ?? '' }}</strong>
+                </{{ $clientUrl ? 'a' : 'article' }}>
+            @endforeach
+        </div>
+    </section>
+
+    <section class="about-expertise">
+        <div>
+            <p class="about-section-label">What We Deliver</p>
+            <h2>{{ $about->expertise_heading }}</h2>
+            <div class="about-rich-copy">{!! $about->expertise_body !!}</div>
+        </div>
+        <aside class="about-certification">
+            <span>Certified Management Systems</span>
+            <h2>ISO</h2>
+            <ul>
+                <li><strong>9001:2015</strong> Quality Management</li>
+                <li><strong>14001:2015</strong> Environmental Management</li>
+                <li><strong>45001:2018</strong> Occupational Health &amp; Safety</li>
+            </ul>
+            <p>All BARQAAB offices are certified.</p>
+        </aside>
+    </section>
+</section>
+
+<button
+    type="button"
+    class="about-go-top"
+    aria-label="Go to top of About Us page"
+    title="Go to top"
+    data-about-go-top
+>
+    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+        <path d="M12 19V5M6.5 10.5 12 5l5.5 5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Top</span>
+</button>
+
+<script>
+    (() => {
+        const button = document.querySelector('[data-about-go-top]');
+        if (!button) return;
+
+        const updateVisibility = () => {
+            button.classList.toggle('is-visible', window.scrollY > 500);
+        };
+
+        button.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            });
+        });
+
+        window.addEventListener('scroll', updateVisibility, { passive: true });
+        updateVisibility();
+    })();
+</script>
 @endsection
