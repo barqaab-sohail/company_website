@@ -2,6 +2,8 @@
 
 namespace App\Filament\Resources\AboutProfiles\Tables;
 
+use App\Filament\Resources\Clients\ClientResource;
+use App\Filament\Resources\Registrations\RegistrationResource;
 use App\Filament\Resources\AboutProfiles\AboutProfileResource;
 use Filament\Actions\Action;
 use Filament\Tables\Columns\TextColumn;
@@ -29,13 +31,13 @@ class AboutProfilesTable
                     ->icon('heroicon-o-building-office-2')
                     ->url(fn ($record) => AboutProfileResource::getUrl('organization', ['record' => $record])),
                 Action::make('registration')
-                    ->label('Registration')
+                    ->label('Manage Registrations')
                     ->icon('heroicon-o-identification')
-                    ->url(fn ($record) => AboutProfileResource::getUrl('registration', ['record' => $record])),
+                    ->url(fn () => RegistrationResource::getUrl('index')),
                 Action::make('clients')
-                    ->label('Clients')
+                    ->label('Manage Clients')
                     ->icon('heroicon-o-user-group')
-                    ->url(fn ($record) => AboutProfileResource::getUrl('clients', ['record' => $record])),
+                    ->url(fn () => ClientResource::getUrl('index')),
                 Action::make('expertise')
                     ->label('Expertise')
                     ->icon('heroicon-o-academic-cap')

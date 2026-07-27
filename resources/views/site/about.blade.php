@@ -56,12 +56,29 @@
             <h2>Registered and certified to deliver</h2>
         </header>
         <div class="registration-grid">
-            @foreach($about->registrations ?? [] as $registration)
-                <article>
-                    <span>{{ str_pad((string)$loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
-                    <h3>{{ $registration['title'] ?? '' }}</h3>
-                    @if($registration['number'] ?? null)<strong>{{ $registration['number'] }}</strong>@endif
-                    @if($registration['details'] ?? null)<p>{{ $registration['details'] }}</p>@endif
+            @foreach($about->registrationRecords as $registration)
+                @php($allowFullImageView = $registration->show_document && $registration->document)
+                <article class="registration-card {{ $registration->document ? 'has-document' : '' }}">
+                    @if($registration->document)
+                        @if($allowFullImageView)
+                            <a class="registration-media is-clickable" href="{{ $registration->document_url }}" target="_blank" rel="noopener" aria-label="View full-size {{ $registration->title }} image">
+                                <img src="{{ $registration->document_url }}" alt="{{ $registration->title }} registration document">
+                            </a>
+                        @else
+                            <div class="registration-media">
+                                <img src="{{ $registration->document_url }}" alt="{{ $registration->title }} registration document">
+                            </div>
+                        @endif
+                    @else
+                        <div class="registration-seal" aria-hidden="true">{{ str_pad((string)$loop->iteration, 2, '0', STR_PAD_LEFT) }}</div>
+                    @endif
+                    <div class="registration-copy">
+                        <span>{{ str_pad((string)$loop->iteration, 2, '0', STR_PAD_LEFT) }}</span>
+                        <h3>{{ $registration->title }}</h3>
+                        @if($registration->number)<strong>{{ $registration->number }}</strong>@endif
+                        @if($registration->details)<p>{{ $registration->details }}</p>@endif
+                        @if($allowFullImageView)<a class="registration-link" href="{{ $registration->document_url }}" target="_blank" rel="noopener">View full image <span aria-hidden="true">↗</span></a>@endif
+                    </div>
                 </article>
             @endforeach
         </div>
@@ -74,15 +91,18 @@
             @if($about->clients_intro)<div>{{ $about->clients_intro }}</div>@endif
         </header>
         <div class="clients-grid">
-            @foreach($about->clients ?? [] as $client)
-                @php($clientUrl = $client['website'] ?? null)
+            @foreach($about->clientRecords as $client)
+                @php($clientUrl = $client->website)
                 <{{ $clientUrl ? 'a' : 'article' }} class="client-card" @if($clientUrl) href="{{ $clientUrl }}" target="_blank" rel="noopener" @endif>
-                    @if($client['logo'] ?? null)
-                        <img src="{{ $about->mediaUrl($client['logo']) }}" alt="{{ $client['name'] ?? 'Client' }} logo">
+                    <div class="client-card-mark">
+                    @if($client->logo)
+                        <img src="{{ $client->logo_url }}" alt="{{ $client->name }} logo">
                     @else
-                        <span>{{ Str::upper(Str::substr($client['name'] ?? '', 0, 2)) }}</span>
+                        <span>{{ Str::upper(Str::substr($client->name, 0, 2)) }}</span>
                     @endif
-                    <strong>{{ $client['name'] ?? '' }}</strong>
+                    </div>
+                    <strong>{{ $client->name }}</strong>
+                    @if($clientUrl)<small>Visit website <span aria-hidden="true">↗</span></small>@endif
                 </{{ $clientUrl ? 'a' : 'article' }}>
             @endforeach
         </div>

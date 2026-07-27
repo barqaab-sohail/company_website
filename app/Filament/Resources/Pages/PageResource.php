@@ -23,7 +23,7 @@ class PageResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        return parent::getEloquentQuery()->whereNotIn('slug', ['about', 'about-us', 'barqaab']);
+        return parent::getEloquentQuery()->whereNotIn('slug', ['about', 'about-us', 'barqaab', 'contact', 'contact-us']);
     }
 
     public static function form(Schema $schema): Schema

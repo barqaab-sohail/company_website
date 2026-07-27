@@ -57,22 +57,40 @@ a { color: inherit; text-decoration: none; }
 .organization-chart ul { margin: 0; padding-left: 17px; color: #5b5b5b; }
 .organization-chart article:first-child ul { display: flex; justify-content: center; gap: 26px; padding: 0; color: #c7d8e5; list-style: none; }
 .organization-chart li { margin: 4px 0; }
-.about-registration { scroll-margin-top: 75px; margin-bottom: 72px; padding: 0 28px; }
-.registration-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-.registration-grid article { position: relative; min-height: 190px; padding: 28px 25px 24px; overflow: hidden; background: #fff; border: 1px solid #dedede; box-shadow: 0 10px 26px rgba(0,0,0,.055); }
-.registration-grid article > span { position: absolute; top: 15px; right: 19px; color: #e2e7ea; font: 700 34px/1 Georgia, serif; }
-.registration-grid h3 { position: relative; max-width: 230px; margin: 0 0 17px; color: #10283b; font: 700 18px/1.35 Georgia, serif; }
-.registration-grid strong { display: block; color: #1e6eab; font-size: 10px; letter-spacing: .7px; text-transform: uppercase; }
-.registration-grid p { margin: 10px 0 0; color: #666; font-size: 12px; line-height: 1.55; }
-.about-clients { scroll-margin-top: 75px; margin-bottom: 72px; padding: 52px 50px 55px; color: #fff; background: #122a3d; }
+.about-registration { position: relative; scroll-margin-top: 75px; margin-bottom: 72px; padding: 54px 50px 58px; overflow: hidden; background: linear-gradient(145deg, #f4f7f9, #eaf0f4); border-top: 5px solid #1e6eab; }
+.about-registration::after { content: ""; position: absolute; right: -90px; bottom: -110px; width: 290px; height: 290px; border: 1px solid rgba(30,110,171,.09); border-radius: 50%; box-shadow: 0 0 0 42px rgba(30,110,171,.035), 0 0 0 84px rgba(30,110,171,.018); }
+.about-registration > * { position: relative; z-index: 1; }
+.registration-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.registration-card { position: relative; min-height: 280px; display: grid; grid-template-columns: 180px minmax(0, 1fr); overflow: hidden; background: #fff; border: 1px solid #dbe3e8; box-shadow: 0 12px 30px rgba(18,42,61,.08); transition: transform .25s ease, box-shadow .25s ease; }
+.registration-card:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(18,42,61,.14); }
+.registration-media, .registration-seal { min-height: 100%; display: flex; align-items: center; justify-content: center; background: #122a3d; }
+.registration-media { padding: 12px; overflow: hidden; background: #eef2f4; border-right: 1px solid #dbe3e8; }
+.registration-media.is-clickable { cursor: zoom-in; }
+.registration-media img { display: block; width: 100%; height: 256px; min-height: 0; background: #fff; box-shadow: 0 4px 14px rgba(18,42,61,.12); object-fit: contain; object-position: center; transition: transform .3s ease; }
+.registration-card:hover .registration-media img { transform: scale(1.015); }
+.registration-seal { color: rgba(255,255,255,.9); background: linear-gradient(155deg, #1e6eab, #122a3d); font: 700 36px/1 Georgia, serif; }
+.registration-copy { position: relative; padding: 29px 26px 25px; }
+.registration-copy > span { position: absolute; top: 17px; right: 19px; color: #e4eaee; font: 700 32px/1 Georgia, serif; }
+.registration-grid h3 { position: relative; max-width: 245px; margin: 0 0 16px; padding-right: 18px; color: #10283b; font: 700 18px/1.35 Georgia, serif; }
+.registration-grid strong { display: block; color: #1e6eab; font-size: 10px; line-height: 1.45; letter-spacing: .7px; text-transform: uppercase; }
+.registration-grid p { margin: 11px 0 0; color: #66717a; font-size: 12px; line-height: 1.6; }
+.registration-link { display: inline-flex; gap: 5px; margin-top: 17px; color: #c96625; font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+.registration-link:hover { color: #1e6eab; }
+.about-clients { position: relative; scroll-margin-top: 75px; margin-bottom: 72px; padding: 60px 50px 62px; overflow: hidden; color: #fff; background: linear-gradient(135deg, #0d2436 0%, #153d59 100%); box-shadow: 0 18px 42px rgba(18,42,61,.16); }
+.about-clients::before { content: ""; position: absolute; top: -130px; right: -90px; width: 360px; height: 360px; border: 1px solid rgba(255,255,255,.08); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.025), 0 0 0 110px rgba(255,255,255,.015); }
+.about-clients > * { position: relative; z-index: 1; }
 .about-clients .about-section-heading h2 { color: #fff; }
 .about-clients .about-section-heading > div { color: #bfcfda; }
-.clients-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
-.client-card { min-height: 145px; display: flex; align-items: center; justify-content: center; padding: 18px 12px; color: #10283b; background: #fff; border-bottom: 4px solid transparent; text-align: center; flex-direction: column; transition: transform .2s ease, border-color .2s ease; }
-.client-card:hover { border-color: #ef7f29; transform: translateY(-3px); }
-.client-card img { display: block; width: 72px; height: 60px; margin-bottom: 13px; object-fit: contain; }
-.client-card > span { display: flex; width: 58px; height: 58px; align-items: center; justify-content: center; margin-bottom: 13px; color: #fff; background: #1e6eab; border-radius: 50%; font: 700 17px/1 Georgia, serif; }
-.client-card strong { font-size: 10px; line-height: 1.35; letter-spacing: .7px; text-transform: uppercase; }
+.clients-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.client-card { position: relative; min-height: 190px; display: flex; align-items: center; justify-content: center; padding: 24px 18px 20px; overflow: hidden; color: #10283b; background: rgba(255,255,255,.98); border: 1px solid rgba(255,255,255,.2); border-radius: 3px; box-shadow: 0 10px 24px rgba(3,14,23,.14); text-align: center; flex-direction: column; transition: transform .25s ease, box-shadow .25s ease; }
+.client-card::after { content: ""; position: absolute; right: 0; bottom: 0; left: 0; height: 4px; background: #ef7f29; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.client-card:hover { transform: translateY(-6px); box-shadow: 0 18px 32px rgba(3,14,23,.24); }
+.client-card:hover::after { transform: scaleX(1); }
+.client-card-mark { width: 98px; height: 82px; display: flex; align-items: center; justify-content: center; margin-bottom: 17px; }
+.client-card img { display: block; max-width: 94px; max-height: 76px; object-fit: contain; }
+.client-card-mark > span { display: flex; width: 68px; height: 68px; align-items: center; justify-content: center; color: #fff; background: linear-gradient(145deg, #287fba, #165e91); border-radius: 50%; box-shadow: 0 8px 17px rgba(30,110,171,.25); font: 700 19px/1 Georgia, serif; }
+.client-card strong { max-width: 185px; font-size: 11px; line-height: 1.45; letter-spacing: .8px; text-transform: uppercase; }
+.client-card small { margin-top: 9px; color: #c96625; font-size: 9px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; }
 .about-expertise { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 55px; align-items: stretch; padding: 48px 50px; background: #f1f4f6; }
 .about-expertise > div { align-self: center; }
 .about-expertise > div > p:not(.about-section-label) { max-width: 690px; margin: 18px 0 0; color: #444; line-height: 1.7; }
@@ -290,9 +308,10 @@ a { color: inherit; text-decoration: none; }
     .about-organization, .about-clients { margin-bottom: 55px; padding: 38px 25px; }
     .organization-chart { grid-template-columns: 1fr; }
     .organization-chart article:first-child { grid-column: 1; }
-    .about-registration { margin-bottom: 55px; padding: 0 8px; }
+    .about-registration { margin-bottom: 55px; padding: 38px 25px; }
     .registration-grid { grid-template-columns: 1fr; }
-    .registration-grid article { min-height: 0; }
+    .registration-card { min-height: 260px; grid-template-columns: 165px minmax(0, 1fr); }
+    .registration-media img { height: 236px; }
     .clients-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .about-expertise { grid-template-columns: 1fr; gap: 35px; padding: 36px 25px; }
     .about-certification { padding: 28px 24px; }
@@ -349,4 +368,9 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
     .about-go-top { transition: none; }
 }
-@media (max-width: 440px) { .portfolio-grid { grid-template-columns: 1fr; } }
+@media (max-width: 440px) {
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .registration-card { grid-template-columns: 1fr; }
+    .registration-media, .registration-seal { min-height: 190px; border-right: 0; border-bottom: 1px solid #dbe3e8; }
+    .registration-media img { width: min(100%, 240px); height: 310px; min-height: 0; }
+}

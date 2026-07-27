@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\AboutProfile;
+use App\Models\ContactSetting;
 use App\Models\Content;
 use App\Models\CoreStaffMember;
 use App\Models\HomeSlide;
@@ -15,6 +16,8 @@ use App\Models\Project;
 use App\Models\ProjectCategory;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 
 class SiteController extends Controller
 {
@@ -58,7 +61,10 @@ class SiteController extends Controller
 
         return view('site.home', ['slides' => $slides]);
     }
-    public function about() { return view('site.about', ['about'=>AboutProfile::query()->firstOrFail()]); }
+    public function about() { return view('site.about', ['about'=>AboutProfile::with([
+        'clientRecords' => fn ($query) => $query->where('is_active', true),
+        'registrationRecords' => fn ($query) => $query->where('is_active', true),
+    ])->firstOrFail()]); }
     public function listing(string $type) { return view('site.listing', ['type'=>$type,'items'=>Content::whereType($type)->whereStatus('published')->latest('published_at')->paginate(12)]); }
     public function projects() { return view('site.projects', [
         'projects'=>Project::with(['featuredImage', 'projectCategory'])->whereStatus('published')->orderBy('sort_order')->orderBy('id')->get(),
@@ -69,7 +75,27 @@ class SiteController extends Controller
     public function management() { return view('site.management', ['members'=>ManagementMember::where('is_active',true)->orderBy('sort_order')->get()]); }
     public function coreStaff() { return view('site.core-staff', ['members'=>CoreStaffMember::where('is_active',true)->orderBy('sort_order')->get()]); }
     public function show(string $slug) { return view('site.show', ['content'=>Page::whereStatus('published')->where('slug',$slug)->firstOrFail()]); }
-    public function contact(Request $request) { $data=$request->validate(['name'=>'required|max:255','email'=>'required|email|max:255','phone'=>'nullable|max:50','subject'=>'required|max:255','message'=>'required|max:5000']); $data['source_ip']=$request->ip(); $data['user_agent']=$request->userAgent(); Inquiry::create($data); return back()->with('success','Thank you. Your message has been received.'); }
+    public function contact(Request $request) {
+        $data=$request->validate(['name'=>'required|max:255','email'=>'required|email|max:255','phone'=>'nullable|max:50','subject'=>'required|max:255','message'=>'required|max:5000']);
+        $data['source_ip']=$request->ip();
+        $data['user_agent']=$request->userAgent();
+        $inquiry=Inquiry::create($data);
+        $notificationEmail=ContactSetting::query()->value('notification_email');
+
+        if ($notificationEmail) {
+            try {
+                Mail::send('emails.contact-inquiry', ['inquiry' => $inquiry], function ($message) use ($inquiry, $notificationEmail): void {
+                    $message->to($notificationEmail)
+                        ->replyTo($inquiry->email, $inquiry->name)
+                        ->subject('Website inquiry: '.$inquiry->subject);
+                });
+            } catch (\Throwable $exception) {
+                Log::warning('Inquiry was stored, but email forwarding failed.', ['inquiry_id' => $inquiry->id, 'exception' => $exception->getMessage()]);
+            }
+        }
+
+        return back()->with('success','Thank you. Your message has been received.');
+    }
     public function careers() { return view('site.careers', ['jobs'=>JobOpening::where('is_active',true)->where(fn($q)=>$q->whereNull('closing_date')->orWhereDate('closing_date','>=',today()))->orderBy('sort_order')->get()]); }
     public function submitCareer(Request $request) {
         $data=$request->validate([
