@@ -22,6 +22,7 @@ class ContactSettingResource extends Resource
     protected static ?string $slug = 'contact-us';
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedEnvelope;
 
+    public static function shouldRegisterNavigation(): bool { return false; }
     public static function canCreate(): bool { return false; }
     public static function form(Schema $schema): Schema { return ContactSettingForm::configure($schema); }
     public static function table(Table $table): Table { return ContactSettingsTable::configure($table); }

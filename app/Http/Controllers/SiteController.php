@@ -74,6 +74,7 @@ class SiteController extends Controller
     public function services() { return view('site.services', ['services'=>Service::where('is_active',true)->orderBy('sort_order')->get()]); }
     public function management() { return view('site.management', ['members'=>ManagementMember::where('is_active',true)->orderBy('sort_order')->get()]); }
     public function coreStaff() { return view('site.core-staff', ['members'=>CoreStaffMember::where('is_active',true)->orderBy('sort_order')->get()]); }
+    public function contactPage() { return view('site.contact', ['contact'=>ContactSetting::query()->first() ?? new ContactSetting]); }
     public function show(string $slug) { return view('site.show', ['content'=>Page::whereStatus('published')->where('slug',$slug)->firstOrFail()]); }
     public function contact(Request $request) {
         $data=$request->validate(['name'=>'required|max:255','email'=>'required|email|max:255','phone'=>'nullable|max:50','subject'=>'required|max:255','message'=>'required|max:5000']);

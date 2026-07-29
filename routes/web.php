@@ -9,7 +9,7 @@ Route::redirect('/about-us', '/barqaab', 301);
 Route::get('/management', [SiteController::class,'management'])->name('management');
 Route::get('/core-staff', [SiteController::class,'coreStaff'])->name('core-staff');
 Route::get('/services', [SiteController::class,'services'])->name('services');
-Route::view('/contact', 'site.contact')->name('contact');
+Route::get('/contact', [SiteController::class,'contactPage'])->name('contact');
 Route::redirect('/contact-us', '/contact', 301);
 Route::get('/careers/submit-cv', [SiteController::class,'careers'])->name('careers');
 Route::redirect('/careers', '/careers/submit-cv', 301);
