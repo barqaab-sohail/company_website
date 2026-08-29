@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
         User::updateOrCreate(['email' => 'admin@barqaab.com.pk'], [
             'name' => 'BARQAAB Administrator',
             'password' => bcrypt(env('ADMIN_PASSWORD', 'ChangeMe123!')),
+            'is_super_admin' => true,
+            'is_active' => true,
         ]);
     }
 }

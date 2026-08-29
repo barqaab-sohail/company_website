@@ -18,7 +18,27 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return true;
+        return $this->is_active;
+    }
+
+    public const PERMISSIONS = [
+        'home_page' => 'Home Page',
+        'about_us' => 'About Us',
+        'management' => 'Management',
+        'core_staff' => 'Core Staff',
+        'services' => 'Services',
+        'projects' => 'Projects',
+        'pages' => 'Website Pages',
+        'contact' => 'Contact Details',
+        'inquiries' => 'Contact Inquiries',
+        'job_openings' => 'Job Openings',
+        'job_applications' => 'Job Applications',
+        'settings' => 'Website Settings',
+    ];
+
+    public function hasPermission(string $permission): bool
+    {
+        return $this->is_super_admin || in_array($permission, $this->permissions ?? [], true);
     }
 
     /**
@@ -30,6 +50,9 @@ class User extends Authenticatable implements FilamentUser
         'name',
         'email',
         'password',
+        'is_super_admin',
+        'is_active',
+        'permissions',
     ];
 
     /**
@@ -52,6 +75,9 @@ class User extends Authenticatable implements FilamentUser
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_super_admin' => 'boolean',
+            'is_active' => 'boolean',
+            'permissions' => 'array',
         ];
     }
 }
