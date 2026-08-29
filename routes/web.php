@@ -3,6 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
 
+Route::get('/session/keep-alive', function () {
+    // Touch the server-side session so an open Filament login form never
+    // submits with an expired CSRF token.
+    session()->put('last_activity_at', now()->timestamp);
+
+    return response()->noContent();
+})->name('session.keep-alive');
+
 Route::get('/', [SiteController::class,'home'])->name('home');
 Route::get('/barqaab', [SiteController::class,'about'])->name('about');
 Route::redirect('/about-us', '/barqaab', 301);
