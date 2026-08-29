@@ -115,5 +115,5 @@ class SiteController extends Controller
         ]);
         return back()->with('success','Your CV has been submitted successfully.');
     }
-    public function apply(Request $request, Content $job) { $data=$request->validate(['name'=>'required|max:255','email'=>'required|email','phone'=>'nullable|max:50','cover_letter'=>'nullable|max:5000','resume'=>'nullable|file|max:5120']); $data['content_id']=$job->id; if($request->hasFile('resume')) $data['resume_path']=$request->file('resume')->store('resumes','public'); JobApplication::create($data); return back()->with('success','Your application has been submitted.'); }
+    public function apply(Request $request, Content $job) { $data=$request->validate(['name'=>'required|max:255','email'=>'required|email|max:255','phone'=>'nullable|max:50','cover_letter'=>'nullable|max:5000','resume'=>'nullable|file|mimes:pdf,doc,docx|max:5120']); $data['content_id']=$job->id; if($request->hasFile('resume')) $data['resume_path']=$request->file('resume')->store('resumes','public'); JobApplication::create($data); return back()->with('success','Your application has been submitted.'); }
 }

@@ -3,7 +3,7 @@
 namespace App\Filament\Resources\Projects\Schemas;
 
 use Filament\Schemas\Schema;
-use Filament\Forms\Components\{DateTimePicker, FileUpload, Hidden, Repeater, RichEditor, Select, Textarea, TextInput};
+use Filament\Forms\Components\{DateTimePicker, FileUpload, Hidden, Repeater, RichEditor, Select, Textarea, TextInput, Toggle};
 use Filament\Schemas\Components\Section;
 use Illuminate\Support\Str;
 
@@ -58,14 +58,14 @@ class ProjectForm
                     ->columnSpanFull(),
                 Section::make('Main Project Pictures')->description('Add one or more main pictures. Multiple pictures display as a slideshow; the first picture is used on project listings.')->schema([
                     Repeater::make('mainImages')->relationship()->schema([
-                        FileUpload::make('path')->image()->disk('public')->directory('project-gallery')->maxSize(10240)->imagePreviewHeight('180')->required()->columnSpanFull(),
+                        FileUpload::make('path')->image()->imageResizeMode('contain')->imageResizeTargetWidth('1920')->imageResizeTargetHeight('1440')->disk('public')->directory('project-gallery')->maxSize(10240)->imagePreviewHeight('180')->required()->columnSpanFull(),
                         TextInput::make('caption'), TextInput::make('alt_text')->label('Alternative text'),
                         TextInput::make('sort_order')->numeric()->default(0), Hidden::make('is_featured')->default(true),
                     ])->columns(2)->reorderable('sort_order')->addActionLabel('Add main picture')->columnSpanFull(),
                 ])->columnSpanFull(),
                 Section::make('Project Gallery Pictures')->description('Optional additional pictures displayed in the Project Gallery at the end of the page.')->schema([
                     Repeater::make('galleryImages')->relationship()->schema([
-                        FileUpload::make('path')->image()->disk('public')->directory('project-gallery')->maxSize(10240)->imagePreviewHeight('180')->required()->columnSpanFull(),
+                        FileUpload::make('path')->image()->imageResizeMode('contain')->imageResizeTargetWidth('1920')->imageResizeTargetHeight('1440')->disk('public')->directory('project-gallery')->maxSize(10240)->imagePreviewHeight('180')->required()->columnSpanFull(),
                         TextInput::make('caption'), TextInput::make('alt_text')->label('Alternative text'),
                         TextInput::make('sort_order')->numeric()->default(0), Hidden::make('is_featured')->default(false),
                     ])->columns(2)->reorderable('sort_order')->addActionLabel('Add gallery picture')->columnSpanFull(),
@@ -74,6 +74,15 @@ class ProjectForm
                     Select::make('status')->options(['draft'=>'Draft','published'=>'Published','archived'=>'Archived'])->default('published')->required(),
                     DateTimePicker::make('published_at')->default(now()), TextInput::make('sort_order')->numeric()->default(0),
                 ])->columns(3)->columnSpanFull(),
+                Section::make('Search engine optimization')
+                    ->description('Optional search and social-sharing settings. Project content is used by default.')
+                    ->schema([
+                        TextInput::make('meta.seo_title')->label('SEO title')->maxLength(60),
+                        TextInput::make('meta.canonical_url')->label('Canonical URL')->url()->maxLength(500),
+                        Textarea::make('meta.seo_description')->label('Meta description')->rows(3)->maxLength(160)->columnSpanFull(),
+                        FileUpload::make('meta.social_image')->label('Social sharing image')->image()->disk('public')->directory('seo')->maxSize(5120),
+                        Toggle::make('meta.noindex')->label('Hide from search engines'),
+                    ])->columns(2)->columnSpanFull(),
             ]);
     }
 }

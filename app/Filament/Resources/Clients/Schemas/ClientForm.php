@@ -19,7 +19,7 @@ class ClientForm
                 Hidden::make('about_profile_id')->default(fn () => AboutProfile::query()->value('id')),
                 TextInput::make('name')->required()->maxLength(255),
                 TextInput::make('website')->url()->placeholder('https://example.com')->maxLength(255),
-                FileUpload::make('logo')->image()->imageEditor()->disk('public')->directory('about/clients')->maxSize(5120)->helperText('Upload a transparent PNG or WebP logo with generous spacing.'),
+                FileUpload::make('logo')->image()->imageResizeMode('contain')->imageResizeTargetWidth('1200')->imageResizeTargetHeight('800')->imageEditor()->disk('public')->directory('about/clients')->maxSize(5120)->helperText('Upload a transparent PNG or WebP logo; oversized images are reduced automatically.'),
                 TextInput::make('sort_order')->numeric()->default(0)->minValue(0),
                 Toggle::make('is_active')->label('Show on website')->default(true),
             ])->columns(2)->columnSpanFull(),

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>@yield('title', 'BARQAAB')</title>
+    @include('seo.meta')
     <link rel="stylesheet" href="{{ asset('css/legacy-page.css') }}?v={{ filemtime(public_path('css/legacy-page.css')) }}">
 </head>
 <body>
@@ -30,5 +30,6 @@
     </div>
 </nav>
 <main>@yield('content')</main>
+@include('seo.analytics')
 </body>
 </html>

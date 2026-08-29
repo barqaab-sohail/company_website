@@ -19,7 +19,15 @@ use App\Models\Registration;
 use App\Models\Service;
 use App\Models\Setting;
 use App\Models\User;
+use Illuminate\Auth\Events\Failed;
+use Illuminate\Auth\Events\Login;
+use Illuminate\Auth\Events\Logout;
+use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -74,6 +82,48 @@ class AppServiceProvider extends ServiceProvider
             }
 
             return $user->is_super_admin ? true : null;
+        });
+
+        RateLimiter::for('contact-form', fn (Request $request) => [
+            Limit::perMinute(5)->by($request->ip()),
+            Limit::perHour(10)->by(strtolower((string) $request->input('email')).'|'.$request->ip()),
+        ]);
+
+        RateLimiter::for('career-form', fn (Request $request) => [
+            Limit::perHour(5)->by($request->ip()),
+            Limit::perDay(10)->by(strtolower((string) $request->input('email')).'|'.$request->ip()),
+        ]);
+
+        Event::listen(Login::class, fn (Login $event) => Log::channel('security')->info('Admin login succeeded.', [
+            'user_id' => $event->user->getAuthIdentifier(),
+            'email' => $event->user->email,
+            'ip' => request()->ip(),
+            'user_agent' => request()->userAgent(),
+        ]));
+
+        Event::listen(Failed::class, fn (Failed $event) => Log::channel('security')->warning('Admin login failed.', [
+            'email' => $event->credentials['email'] ?? null,
+            'ip' => request()->ip(),
+            'user_agent' => request()->userAgent(),
+        ]));
+
+        Event::listen(Logout::class, fn (Logout $event) => Log::channel('security')->info('Admin logout.', [
+            'user_id' => $event->user?->getAuthIdentifier(),
+            'ip' => request()->ip(),
+        ]));
+
+        User::updated(function (User $user): void {
+            $changes = array_keys($user->getChanges());
+
+            if (array_intersect($changes, ['email', 'password', 'is_super_admin', 'is_active', 'permissions'])) {
+                Log::channel('security')->notice('User security settings changed.', [
+                    'user_id' => $user->getKey(),
+                    'changed_fields' => array_values(array_diff($changes, ['password', 'updated_at'])),
+                    'password_changed' => in_array('password', $changes, true),
+                    'actor_id' => auth()->id(),
+                    'ip' => request()->ip(),
+                ]);
+            }
         });
     }
 }

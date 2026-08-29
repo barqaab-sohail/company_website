@@ -9,7 +9,7 @@
             <div class="project-slides">
                 @foreach($project->mainImages as $image)
                     <figure class="project-slide{{ $loop->first ? ' is-active' : '' }}" aria-hidden="{{ $loop->first ? 'false' : 'true' }}">
-                        <img src="{{ $image->url }}" alt="{{ $image->alt_text ?: $project->title }}">
+                        <img src="{{ $image->url }}" alt="{{ $image->alt_text ?: $project->title }}" @if(!$loop->first) loading="lazy" @else fetchpriority="high" @endif decoding="async">
                         @if($image->caption)<figcaption>{{ $image->caption }}</figcaption>@endif
                     </figure>
                 @endforeach
@@ -45,7 +45,7 @@
         </div>
     @endif
     @if($project->galleryImages->isNotEmpty())
-        <section class="project-gallery"><h3>Project Gallery</h3><div>@foreach($project->galleryImages as $image)<figure><img src="{{ $image->url }}" alt="{{ $image->alt_text ?: $project->title }}">@if($image->caption)<figcaption>{{ $image->caption }}</figcaption>@endif</figure>@endforeach</div></section>
+        <section class="project-gallery"><h3>Project Gallery</h3><div>@foreach($project->galleryImages as $image)<figure><img src="{{ $image->url }}" alt="{{ $image->alt_text ?: $project->title }}" loading="lazy" decoding="async">@if($image->caption)<figcaption>{{ $image->caption }}</figcaption>@endif</figure>@endforeach</div></section>
     @endif
 </article>
 @if($project->mainImages->count() > 1)

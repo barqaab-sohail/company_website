@@ -11,7 +11,7 @@
     <div class="portfolio-grid">
         @foreach($projects as $project)
             <a class="portfolio-card" data-category="{{ $project->projectCategory?->slug ?: 'all' }}" href="{{ route('projects.show', $project->slug) }}">
-                @if($project->featuredImage)<img src="{{ $project->featuredImage->url }}" alt="{{ $project->featuredImage->alt_text ?: $project->title }}">@else<div class="portfolio-placeholder"></div>@endif
+                @if($project->featuredImage)<img src="{{ $project->featuredImage->url }}" alt="{{ $project->featuredImage->alt_text ?: $project->title }}" loading="lazy" decoding="async">@else<div class="portfolio-placeholder"></div>@endif
                 <span><strong>{{ $project->title }}</strong><small>View project</small></span>
             </a>
         @endforeach

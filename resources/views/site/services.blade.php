@@ -24,7 +24,7 @@
         @foreach($services as $index => $service)
             <article class="service-card">
                 <div class="service-media">
-                    @if($service->image)<img src="{{ $service->image_url }}" alt="{{ $service->title }}">@endif
+                    @if($service->image)<img src="{{ $service->image_url }}" alt="{{ $service->title }}" loading="lazy" decoding="async">@endif
                     <span>{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
                 </div>
                 <div class="service-copy">

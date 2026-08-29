@@ -16,7 +16,7 @@
             <article class="manager-profile">
                 <div class="manager-photo">
                     @if($member->photo)
-                        <img src="{{ $member->photo_url }}" alt="{{ $member->name }}, {{ $member->designation }}">
+                        <img src="{{ $member->photo_url }}" alt="{{ $member->name }}, {{ $member->designation }}" loading="lazy" decoding="async">
                     @else
                         <span aria-hidden="true">{{ Str::upper(Str::substr($member->name, 0, 1)) }}</span>
                     @endif

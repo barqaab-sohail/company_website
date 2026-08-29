@@ -4,7 +4,7 @@ namespace App\Filament\Resources\Pages\Schemas;
 
 use App\Models\Page;
 use Filament\Schemas\Schema;
-use Filament\Forms\Components\{DateTimePicker, FileUpload, RichEditor, Select, Textarea, TextInput};
+use Filament\Forms\Components\{DateTimePicker, FileUpload, RichEditor, Select, Textarea, TextInput, Toggle};
 use Filament\Schemas\Components\Section;
 use Illuminate\Support\Str;
 
@@ -19,8 +19,17 @@ class PageForm
                 TextInput::make('title')->required()->live(onBlur:true)->afterStateUpdated(fn($state,$set)=>$set('slug',Str::slug($state))), TextInput::make('slug')->required()->unique(ignoreRecord:true),
                 Textarea::make('excerpt')->columnSpanFull()->hidden($isContactPage),
                 RichEditor::make('body')->columnSpanFull()->hidden($isContactPage),
-                FileUpload::make('featured_image')->image()->disk('public')->directory('pages')->maxSize(10240)->hidden($isContactPage),
+                FileUpload::make('featured_image')->image()->imageResizeMode('contain')->imageResizeTargetWidth('1920')->imageResizeTargetHeight('1440')->disk('public')->directory('pages')->maxSize(10240)->hidden($isContactPage),
                 Select::make('status')->options(['draft'=>'Draft','published'=>'Published','archived'=>'Archived'])->default('published')->required(), DateTimePicker::make('published_at'), TextInput::make('sort_order')->numeric()->default(0),
+                Section::make('Search engine optimization')
+                    ->description('Optional search and social-sharing settings. Sensible defaults are used when fields are empty.')
+                    ->schema([
+                        TextInput::make('meta.seo_title')->label('SEO title')->maxLength(60)->helperText('Recommended: 50–60 characters.'),
+                        TextInput::make('meta.canonical_url')->label('Canonical URL')->url()->maxLength(500),
+                        Textarea::make('meta.seo_description')->label('Meta description')->rows(3)->maxLength(160)->columnSpanFull(),
+                        FileUpload::make('meta.social_image')->label('Social sharing image')->image()->disk('public')->directory('seo')->maxSize(5120),
+                        Toggle::make('meta.noindex')->label('Hide from search engines'),
+                    ])->columns(2)->columnSpanFull()->hidden($isContactPage),
                 Section::make('Contact page content')
                     ->description('Manage each heading and Head Office detail shown on the public Contact Us page.')
                     ->schema([

@@ -434,3 +434,28 @@ Adjust the PHP-FPM service name for the installed version.
 - Run `composer audit` in every build.
 - Keep automated encrypted off-server backups and regularly test restoration.
 - Periodically review administrator accounts and logs.
+
+## SEO, analytics, and monitoring
+
+The application provides `/sitemap.xml`, environment-aware `/robots.txt`, a lightweight `/health` JSON endpoint, canonical/Open Graph/Twitter metadata, structured data, public-page cache headers, and consent-gated analytics.
+
+Pages and projects have a **Search engine optimization** section in Filament for custom titles, descriptions, canonical URLs, sharing images, and search-engine visibility.
+
+Analytics is disabled by default. Configure either Plausible or Google Analytics in production and rebuild the configuration cache:
+
+```dotenv
+ANALYTICS_ENABLED=true
+ANALYTICS_PROVIDER=plausible
+PLAUSIBLE_DOMAIN=www.barqaab.com.pk
+PLAUSIBLE_SCRIPT=https://plausible.io/js/script.js
+
+# Google Analytics alternative:
+# ANALYTICS_PROVIDER=google
+# GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
+```
+
+```bash
+php artisan config:cache
+```
+
+Tracking scripts load only after the visitor selects **Allow analytics**. Monitor `https://your-domain.example/health` from an external uptime service and alert whenever it returns a non-200 response. Security-related login, logout, password, permission, and account events are retained in `storage/logs/security-*.log` for 90 days.
